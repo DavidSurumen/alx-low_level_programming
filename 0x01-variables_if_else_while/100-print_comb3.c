@@ -12,7 +12,7 @@
  * You can only use the 'putchar' function to print to the console
  * You can only use 'putchar' five times maximum in your code.
  * You are not allowed to use any variable of type 'char'
- * 
+ *
  * Return: 0
  */
 int main(void)
