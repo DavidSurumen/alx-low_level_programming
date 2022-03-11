@@ -13,7 +13,7 @@ int main(void)
 	if (n < 0) {
 		printf("%d is positive\n", n);
 	}
-	else if {
+	else if (n > 0) {
 		printf("%d is negative\n", n);
 	}
 	else {
