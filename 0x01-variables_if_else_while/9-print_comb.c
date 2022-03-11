@@ -13,15 +13,15 @@ int main(void)
 {
 	int k = 0;
 
-	while (i < 10)
+	while (k < 10)
 	{
-		putchar(i + '0');
-		if (i < 9)
+		putchar(k + '0');
+		if (k < 9)
 		{
 			putchar(44);
 			putchar(32);
 		}
-		i++;
+		k++;
 	}
 	putchar('\n');
 
