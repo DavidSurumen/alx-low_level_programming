@@ -16,7 +16,7 @@ int main(void)
 		l++;
 	}
 
-	l = toupper(l);
+	l = 'A';
 	while (l <= 'Z')
 	{
 		putchar(l);
