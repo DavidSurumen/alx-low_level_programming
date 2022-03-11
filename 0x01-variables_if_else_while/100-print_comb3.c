@@ -22,8 +22,8 @@ int main(void)
 
 	while (m < 100)
 	{
-		n = m % 10; // the singles digit
-		p = m / 10; // the doubles digit
+		n = m % 10; /* the singles digit */
+		p = m / 10; /* the doubles digit */
 
 		if (p < n)
 		{
