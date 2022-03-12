@@ -18,37 +18,28 @@
  */
 int main(void)
 {
+	int i, j;
 
-	int num, num2;
-	int a, b, c, d;
-
-	for (num = 0; num < 100; num++)
+	for (i = 0; i < 100; i++)
 	{
-		a = num % 10; /* singles first_digit */
-		b = num / 10; /* doubles first_digit */
-
-		for (num2 = 0; num2 < 100; num2++)
+		for (j = 0; j < 100; j++)
 		{
-			c = num2 % 10; /* singles second_digit */
-			d = num2 / 10; /* doubles second_digit */
-
-			if (b < d || (b == d && a < c))
+			if (i < j)
 			{
-				putchar(b + '0');
-				putchar(a + '0');
-				putchar(32);
-				putchar(d + '0');
-				putchar(c + '0');
-
-				if (!(a == 9 && b == 8))
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					putchar(44); /* put a comma */
-					putchar(32); /* put a SPACE */
+					putchar(',');
+					putchar(' ');
 				}
 			}
+
 		}
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }
