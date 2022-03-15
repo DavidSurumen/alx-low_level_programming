@@ -8,19 +8,23 @@ void jack_bauer(void)
 {
 	int min = 0;
 	int hour = 0;
+	int i, j, k, l;
 
 	while (hour < 24)
 	{
+		i = hours / 10; /* doubles digit in hours*/
+		j = hours % 10; /* singles digit */
+
 		while (min < 60)
 		{
-			if (hour < 10)
-				_putchar('0' + 0);
-			_putchar(hour);
-			_putchar(':');
+			k = min / 10; /* doubles digit ni minutes */
+			k = min % 10; /* singles digit */
 
-			if (min < 10)
-				_putchar('0' + 0);
-			_putchar(min);
+			_putchar('0' + i);
+			_putchar('0' + j);
+			_putchar(':');
+			_putchar('0' + k)'
+			_putchar('0' + l);
 			_putchar('\n');
 
 			min++;
