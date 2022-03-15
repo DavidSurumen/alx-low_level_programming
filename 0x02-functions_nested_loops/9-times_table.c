@@ -2,36 +2,34 @@
 
 /**
  * times_table - prints the times table up to 9
- * Return: 0
+ *
+ * Return: void
  */
+
 void times_table(void)
 {
-	int i, j, k, l, m;
+	int a, b, c, d, e;
 
-	for (i = 0; i < 10; i++)
+	for (a = 0; a < 10; a++)
 	{
-		for (j = 0; j < 10; j++)
+		for (b = 0; b < 10; b++)
 		{
-			k = i * j; /* multiply rows and columns, store in k */
-
-			l = k / 10; /* get the doubles digit of k */
-			m = k % 10; /* singles digit */
-
-			if (j == 0)
+			c = a * b;
+			d = c / 10;
+			e = c % 10;
+			if (b == 0)
 				_putchar('0');
-
-			else if (k < 10)
+			else if (c < 10)
 			{
 				_putchar(' ');
-				_putchar('0' + m);
+				_putchar('0' + e);
 			}
 			else
 			{
-				_putchar('0' + l);
-				_putchar('0' + m);
+				_putchar('0' + d);
+				_putchar('0' + e);
 			}
-
-			if (j < 9)
+			if (b < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
