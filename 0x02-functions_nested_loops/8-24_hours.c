@@ -7,10 +7,10 @@
 void jack_bauer(void)
 {
 	int min = 0;
-	int hour = 0;
+	int hour;
 	int i, j, k, l;
 
-	while (hour < 24)
+	for (hour = 0; hour < 24; hour++)
 	{
 		i = hour / 10; /* doubles digit in hours*/
 		j = hour % 10; /* singles digit */
@@ -29,6 +29,5 @@ void jack_bauer(void)
 
 			min++;
 		}
-		hour++;
 	}
 }
