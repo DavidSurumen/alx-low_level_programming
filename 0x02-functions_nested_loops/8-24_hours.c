@@ -6,7 +6,7 @@
  */
 void jack_bauer(void)
 {
-	int min = 0;
+	int min;
 	int hour;
 	int i, j, k, l;
 
@@ -15,7 +15,7 @@ void jack_bauer(void)
 		i = hour / 10; /* doubles digit in hours*/
 		j = hour % 10; /* singles digit */
 
-		while (min < 60)
+		for (min = 0; min < 60; min++)
 		{
 			k = min / 10; /* doubles digit ni minutes */
 			l = min % 10; /* singles digit */
@@ -26,8 +26,6 @@ void jack_bauer(void)
 			_putchar('0' + k);
 			_putchar('0' + l);
 			_putchar('\n');
-
-			min++;
 		}
 	}
 }
