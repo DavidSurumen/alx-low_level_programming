@@ -4,7 +4,6 @@
  * *string_toupper - capitalize a string
  * @str: pointer to string
  * Return: capitalized string
- *
  */
 char *string_toupper(char *str)
 {
