@@ -11,22 +11,22 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i, sep = n - 1;
+	unsigned int i;
 	va_list ap;
+
+	va_start(ap, n);
 
 	if (n > 0)
 	{
-		va_start(ap, n);
-
-		for (i = 0; i < n; i++, sep--)
+		for (i = 0; i < n - 1; i++)
 		{
-			if (sep > 0)
+			if (separator)
 				printf("%d%s", va_arg(ap, int), separator);
 			else
 				printf("%d", va_arg(ap, int));
 		}
+		printf("%d", va_arg(ap, int));
 		printf("\n");
-
-		va_end(ap);
 	}
+	va_end(ap);
 }
