@@ -11,7 +11,7 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i, sep = n-1;
+	unsigned int i, sep = n - 1;
 	va_list ap;
 
 	if (n > 0)
