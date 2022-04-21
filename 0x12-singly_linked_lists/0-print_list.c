@@ -12,7 +12,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	int count = 0;	/* declare counter initialized to 0 */
+	unsigned int count = 0;	/* declare counter initialized to 0 */
 
 	if (h == NULL)
 		exit(-1);
