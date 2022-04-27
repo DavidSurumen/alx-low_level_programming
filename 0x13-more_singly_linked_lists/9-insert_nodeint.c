@@ -33,26 +33,26 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (idx == 0)
 	{
-		new = (*head)->next;
+		new->next = *head;
 		*head = new;
+		return (new);
 	}
-	else
+
+	for (i = 0, tmp = *head; i < idx; i++, tmp = tmp->next)
 	{
-		for (i = 0, tmp = *head; i < idx; i++, tmp = tmp->next)
+		if (!tmp)
+			return (NULL);
+		if (i + 1 == idx && (!tmp->next))
 		{
-			if (!tmp)
-				return (NULL);
-			if (i + 1 == idx && (!tmp->next))
-			{
-				tmp->next = new;
-				break;
-			}
-			if (i + 1 == idx)
-			{
-				new->next = tmp->next;
-				tmp->next = new;
-			}
-		}		
+			tmp->next = new;
+			break;
+		}
+		if (i + 1 == idx)
+		{
+			new->next = tmp->next;
+			tmp->next = new;
+		}
 	}
+
 	return (new);
 }
