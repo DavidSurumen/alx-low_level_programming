@@ -1,24 +1,20 @@
 CC = gcc
-SRC = main.c school.c
-OBJ = $(SRC:.c=.o)
-NAME = school
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o) 
+NAME = holberton
+TOCLEAN = *~ 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-.PHONY: all clean oclean fclean re
+.PHONY: all clean fclean oclean re
 
-all: m.h $(OBJ)
+all : $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
-clean:
-	$(RM) *~ $(NAME)
+fclean: oclean clean
 
 oclean:
 	$(RM) $(OBJ)
 
-fclean: clean oclean
-
+clean :
+	$(RM)  $(TOCLEAN) $(NAME)
 re: fclean all
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Ter
